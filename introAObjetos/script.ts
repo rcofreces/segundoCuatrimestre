@@ -34,5 +34,5 @@ class Televisor {
 
 }
 
-let primerTelevisor = new Televisor(true, 45, 67, "Sony", "123", 60);
-let segundoTelevisor = new Televisor(false, 24, 78, "Samsung", "UH7000", 42);
+let primerTelevisor = new Televisor(true, 45, 67, "123", "Sony", 60);
+let segundoTelevisor = new Televisor(false, 24, 78, "UH7000", "Samsung", 42);
