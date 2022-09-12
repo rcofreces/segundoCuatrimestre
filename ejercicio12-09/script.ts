@@ -32,19 +32,22 @@ class Auto {
         return this.velocidadActual;
     };
 
-    acelerar(cantidad:number):number {
+    acelerar(cantidad: number):number {
         let valor: number = cantidad;
-        this.velocidadActual = this.velocidadActual + (this.velocidadActual*valor);
+        this.velocidadActual = this.velocidadActual + valor;
         return this.velocidadActual;
     };
 
     frenar(cantidad: number):number {
         let valor: number = cantidad;
-        this.velocidadActual = this.velocidadActual - (this.velocidadActual*valor);
-        return this.velocidadActual
+        this.velocidadActual = this.velocidadActual - valor;
+        return this.velocidadActual;
     };
 
 }
 
 let primerAuto = new Auto(true, 100, 60, "Toyota", "Hilux", 2018);
 let segundoAuto = new Auto(false, 67, 0, "Volkswagen", "Golf", 2021);
+
+console.log(primerAuto.modelo);
+console.log(primerAuto.acelerar(40));
