@@ -33,13 +33,13 @@ class Auto {
     };
 
     acelerar(cantidad:number):number {
-        let valor = cantidad;
+        let valor: number = cantidad;
         this.velocidadActual = this.velocidadActual + (this.velocidadActual*valor);
         return this.velocidadActual;
     };
 
     frenar(cantidad: number):number {
-        let valor = cantidad;
+        let valor: number = cantidad;
         this.velocidadActual = this.velocidadActual - (this.velocidadActual*valor);
         return this.velocidadActual
     };
