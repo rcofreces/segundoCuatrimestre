@@ -36,21 +36,19 @@ class SistemaEducativo {
         }
     }
     
-/*     matricularAlumno() {
-        let array = ["Pepe", "Inglés", "Juancito", 10];
-        return SistemaEducativo.push(array);
-    } */
-    
-/*     contratarProfesor() {
+/*     public matricularAlumno() {
         return SistemaEducativo.push();
-    } */
-
+    } 
     
-/*     expulsarAlumno() {
+    public expulsarAlumno() {
         return SistemaEducativo.pop();
-    } */
+    }
+
+    public contratarProfesor() {
+        return SistemaEducativo.push();
+    }
     
-/*     despedirProfesor() {
+    public despedirProfesor() {
         return SistemaEducativo.pop();
     } */
 
