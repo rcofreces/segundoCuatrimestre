@@ -1,11 +1,11 @@
 class Auto {
     
-    public estaPrendido: boolean;
-    public valorCombustible: number;
-    public velocidadActual: number;
-    public modelo: string;
-    public marca: string;
-    public anio: number;
+    private estaPrendido: boolean;
+    private valorCombustible: number;
+    private velocidadActual: number;
+    private modelo: string;
+    private marca: string;
+    private anio: number;
 
     constructor(paramPrendido:boolean, paramCombustible:number, paramVelocidad:number, paramModelo: string, paramMarca: string, paramAnio: number) {
         this.estaPrendido = paramPrendido;
@@ -49,5 +49,5 @@ class Auto {
 let primerAuto = new Auto(true, 100, 60, "Toyota", "Hilux", 2018);
 let segundoAuto = new Auto(false, 67, 0, "Volkswagen", "Golf", 2021);
 
-console.log(primerAuto.modelo);
+console.log(primerAuto.obtenerVelocidad());
 console.log(primerAuto.acelerar(40));

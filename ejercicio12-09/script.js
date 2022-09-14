@@ -41,5 +41,5 @@ var Auto = /** @class */ (function () {
 }());
 var primerAuto = new Auto(true, 100, 60, "Toyota", "Hilux", 2018);
 var segundoAuto = new Auto(false, 67, 0, "Volkswagen", "Golf", 2021);
-console.log(primerAuto.modelo);
+console.log(primerAuto.obtenerVelocidad());
 console.log(primerAuto.acelerar(40));
