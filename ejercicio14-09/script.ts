@@ -1,3 +1,87 @@
+class Alumno {
+    private nombre: string;
+    private apellido: string;
+    private notaMatematica: number;
+    private notaIngles: number;
+    private notaProgramacion: number;
+
+    constructor(pNombre: string, pApellido: string, pNotaMatematica: number, pNotaIngles: number, pNotaProgramacion: number) {
+        this.nombre = pNombre;
+        this.apellido = pApellido;
+        this.notaMatematica = pNotaMatematica;
+        this.notaIngles = pNotaIngles;
+        this.notaProgramacion = pNotaProgramacion;
+    }
+
+    public getNombre(): string {
+        return this.nombre;
+    }
+
+    public getApellido(): string {
+        return this.apellido;
+    }
+
+    public getNotaMatematica(): number {
+        return this.notaMatematica;
+    }
+
+    public getNotaIngles(): number {
+        return this.notaIngles;
+    }
+
+    public getNotaProgramacion(): number {
+        return this.notaProgramacion;
+    }
+
+    public setNombre(nombre: string) {
+        this.nombre = nombre;
+    }
+
+    public setApellido(apellido: string) {
+        this.apellido = apellido;
+    }
+
+    public setNotaMatematica(nota: number) {
+        this.notaMatematica = nota;
+    }
+
+    public setNotaIngles(nota: number) {
+        this.notaIngles = nota;
+    }
+
+    public setNotaProgramacion(nota) {
+        this.notaProgramacion = nota;
+    }
+
+    public getCalificacion(): string {
+    }
+    
+}
+class Profesor {
+    private nombre: string;
+    private apellido: string;
+    private alumno: Alumno;
+
+}
+
+
+class SistemaEducativo {
+    private nombreEscuela: string;
+    private listadoAlumnos: Alumno[];
+    private listadoProfesor: Profesor[];
+
+}
+
+
+
+
+
+
+
+
+
+
+
 class SistemaEducativo {
     
     private alumno: string;
