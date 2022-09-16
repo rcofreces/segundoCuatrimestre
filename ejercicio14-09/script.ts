@@ -17,8 +17,16 @@ class Alumno {
         return this.nombre;
     }
 
+    public setNombre(nombre: string) {
+        this.nombre = nombre;
+    }
+
     public getApellido(): string {
         return this.apellido;
+    }
+
+    public setApellido(apellido: string) {
+        this.apellido = apellido;
     }
 
     public getNotaMatematica(): number {
@@ -33,14 +41,6 @@ class Alumno {
         return this.notaProgramacion;
     }
 
-    public setNombre(nombre: string) {
-        this.nombre = nombre;
-    }
-
-    public setApellido(apellido: string) {
-        this.apellido = apellido;
-    }
-
     public setNotaMatematica(nota: number) {
         this.notaMatematica = nota;
     }
@@ -53,99 +53,129 @@ class Alumno {
         this.notaProgramacion = nota;
     }
 
-    public getCalificacion(): string {
+    public getCalificacionMatematica(): string {
+        if (this.notaMatematica > 7) {
+            return "Aprobado";
+        } else {
+            return "Desaprobado";
+        }
+    }
+
+    public getCalificacionIngles(): string {
+        if (this.notaIngles > 7) {
+            return "Aprobado";
+        } else {
+            return "Desaprobado";
+        }
+    }
+
+    public getCalificacionProgramacion(): string {
+        if (this.notaProgramacion > 7) {
+            return "Aprobado";
+        } else {
+            return "Desaprobado";
+        }
     }
     
 }
 class Profesor {
     private nombre: string;
     private apellido: string;
-    private alumno: Alumno;
+    private listadoAlumnos: Alumno[];
+
+    constructor(pNombre: string, pApellido: string, pListadoAlumnos: Alumno[]) {
+        this.nombre = pNombre;
+        this.apellido = pApellido;
+        this.listadoAlumnos = pListadoAlumnos;
+    }
+
+    public getNombre(): string {
+        return this.nombre;
+    }
+
+    public setNombre(nombre: string) {
+        this.nombre = nombre;
+    }
+
+    public getApellido(): string {
+        return this.apellido;
+    }
+
+    public setApellido(apellido: string) {
+        this.apellido = apellido;
+    }
+
+    public getAlumnos() {
+        return this.listadoAlumnos;
+    }
 
 }
-
-
 class SistemaEducativo {
     private nombreEscuela: string;
     private listadoAlumnos: Alumno[];
-    private listadoProfesor: Profesor[];
+    private listadoProfesores: Profesor[];
 
-}
-
-
-
-
-
-
-
-
-
-
-
-class SistemaEducativo {
-    
-    private alumno: string;
-    private materia: string;
-    private profesor: string;
-    private nota: number;
-
-    constructor(pAlumno: string, pMateria: string, pProfesor: string, pNota: number) {
-        this.alumno = pAlumno;
-        this.materia = pMateria;
-        this.profesor = pProfesor;
-        this.nota = pNota;
+    constructor(pNombre: string, pListadoAlumnos: Alumno[], pListadoProfesores: Profesor[]) {
+        this.nombreEscuela = pNombre;
+        this.listadoAlumnos = pListadoAlumnos;
+        this.listadoProfesores = pListadoProfesores;
     }
 
-    public obtenerAlumno() {
-        return this.alumno;
-    }
-    
-    public obtenerMateria() {
-        return this.materia;
-    
-    }
-    public obtenerProfesor() {
-        return this.profesor;
+    public getNombreEscuela(): string {
+        return this.nombreEscuela;
     }
 
-    public obtenerNota() {
-        return this.nota;
+    public setNombreEscuela(nombre: string) {
+        this.nombreEscuela = nombre;
     }
-    
-    resultadoBimestre() {
-        if (this.nota > 7) {
-            return "aprobado";
-        } else {
-            return "desaprobado";
+
+    public contratarProfesor(profesor: Profesor) {
+        this.listadoProfesores.push(profesor);
+        console.log(`Profesor ${profesor.getNombre()} ${profesor.getApellido()} contratado`);
+    }
+
+    public despedirProfesor(profesor: Profesor) {
+        for (let i: number = 0; i < this.listadoProfesores.length; i++) {
+            if (profesor.getApellido() === this.listadoProfesores[i].getApellido()) {
+                this.listadoProfesores.splice(i, 1);
+                console.log(`Profesor ${profesor.getNombre()} ${profesor.getApellido()} despedido`);
+            } else {
+                console.log(`No se encontró al profesor ${profesor.getNombre()} ${profesor.getApellido()}`);
+            }
+            i++;
         }
     }
-    
-/*     public matricularAlumno() {
-        return SistemaEducativo.push();
-    } 
-    
-    public expulsarAlumno() {
-        return SistemaEducativo.pop();
-    }
 
-    public contratarProfesor() {
-        return SistemaEducativo.push();
+    public matricularAlumno(alumno: Alumno) {
+        this.listadoAlumnos.push(alumno);
+        console.log(`Alumno ${alumno.getNombre()} ${alumno.getApellido()} matriculado`);
     }
-    
-    public despedirProfesor() {
-        return SistemaEducativo.pop();
+/* ME FALTA CORREGIR ESTA FUNCIÓN */
+/*     public despedirAlumno(alumno: Alumno) {
+        for (let i: number = 0; i < this.listadoAlumnos.length; i++) {
+            if (alumno.getApellido() === this.listadoAlumnos[i].getApellido()) {
+                this.listadoAlumnos.splice(i, 1);
+                console.log(`Alumno ${alumno.getNombre()} ${alumno.getApellido()} despedido`);
+            } else {
+                console.log(`No se encontró al alumno ${alumno.getNombre()} ${alumno.getApellido()}`);
+            }
+            i++;
+        }
     } */
-
 }
 
-let alumno1 = new SistemaEducativo("Ricardo Gómez", "Matemáticas", "José Perez", 8);
-let alumno2 = new SistemaEducativo("Diego Leun", "Programación", "Ayelén Hauz", 7);
-let alumno3 = new SistemaEducativo("María Hernández", "Javascript", "Rodrigo Pepito", 9);
-let alumno4 = new SistemaEducativo("Aimé Makus", "Css", "Alejandra Galli", 4);
+let alumno1 = new Alumno("Ricardo", "Gómez", 10, 6, 7);
+let alumno2 = new Alumno("María", "Galli", 6, 7, 8);
+let alumno3 = new Alumno("Eduardo", "Chavez", 8, 8, 8);
+let alumno4 = new Alumno("Julieta", "Rodríguez", 10, 9, 7);
 
-console.log("==============================================================================================================================================");
-console.log(`El alumno ${alumno1.obtenerAlumno()} cursó la materia ${alumno1.obtenerMateria()} con el profesor ${alumno1.obtenerProfesor()} y su bimestre fue '${alumno1.resultadoBimestre()}' con un ${alumno1.obtenerNota()}.`);
-console.log(`El alumno ${alumno2.obtenerAlumno()} cursó la materia ${alumno2.obtenerMateria()} con el profesor ${alumno2.obtenerProfesor()} y su bimestre fue '${alumno2.resultadoBimestre()}' con un ${alumno2.obtenerNota()}.`);
-console.log(`El alumno ${alumno3.obtenerAlumno()} cursó la materia ${alumno3.obtenerMateria()} con el profesor ${alumno3.obtenerProfesor()} y su bimestre fue '${alumno3.resultadoBimestre()}' con un ${alumno3.obtenerNota()}.`);
-console.log(`El alumno ${alumno4.obtenerAlumno()} cursó la materia ${alumno4.obtenerMateria()} con el profesor ${alumno4.obtenerProfesor()} y su bimestre fue '${alumno4.resultadoBimestre()}' con un ${alumno4.obtenerNota()}.`);
-console.log("==============================================================================================================================================");
+let arrayAlumnos: Alumno[] = [alumno1, alumno2, alumno3, alumno4];
+
+let docenteM = new Profesor("Daniel", "Claus", arrayAlumnos);
+let docenteI = new Profesor("Paola", "Garcia", arrayAlumnos);
+let docenteP = new Profesor("Julian", "Peralta", arrayAlumnos);
+
+let arrayProfesores: Profesor[] = [docenteM, docenteI, docenteP];
+
+let escuelaPrimaria = new SistemaEducativo("Escuela 13", arrayAlumnos, arrayProfesores);
+let escuelaSecundaria = new SistemaEducativo("Escuela 15", arrayAlumnos, arrayProfesores);
