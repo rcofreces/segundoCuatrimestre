@@ -179,5 +179,3 @@ let arrayProfesores: Profesor[] = [docenteM, docenteI, docenteP];
 
 let escuelaPrimaria = new SistemaEducativo("Escuela 13", arrayAlumnos, arrayProfesores);
 let escuelaSecundaria = new SistemaEducativo("Escuela 15", arrayAlumnos, arrayProfesores);
-
-console.log(docenteM);
