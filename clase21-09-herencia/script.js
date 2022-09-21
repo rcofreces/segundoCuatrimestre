@@ -63,9 +63,17 @@ var SmartTV = /** @class */ (function (_super) {
             return false;
         }
     };
+    SmartTV.prototype.getPulgadas = function () {
+        return this.pulgadas;
+    };
+    SmartTV.prototype.setPulgadas = function (cantidad) {
+        this.pulgadas = cantidad;
+    };
     return SmartTV;
 }(Televisor));
 var televisor1 = new Televisor(49, "Samsung", "UH7000");
 var smartTV1 = new SmartTV(70, "Sony", "SYS8670");
 console.log(televisor1);
 console.log(smartTV1);
+console.log(smartTV1.setPulgadas(13));
+console.log(smartTV1.getPulgadas());
