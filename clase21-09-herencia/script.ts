@@ -1,7 +1,7 @@
 class Televisor {
-    private pulgadas: number;
-    private marca: string;
-    private modelo: string;
+    protected pulgadas: number;
+    protected marca: string;
+    protected modelo: string;
 
     constructor(pPulgadas: number, pMarca: string, pModelo: string) {
         this.pulgadas = pPulgadas;
@@ -35,8 +35,8 @@ class Televisor {
 }
 
 class SmartTV extends Televisor {
-    private wifi:boolean;
-    private navegarInternet: boolean;
+    protected wifi:boolean;
+    protected navegarInternet: boolean;
 
     constructor(pPulgadas: number, pMarca: string, pModelo: string) {
         super(pPulgadas, pMarca, pModelo);
@@ -59,10 +59,21 @@ class SmartTV extends Televisor {
             return false;
         }
     }
+
+    public getPulgadas():number {
+        return this.pulgadas;
+    }
+
+    public setPulgadas(cantidad:number) {
+        this.pulgadas = cantidad;
+    }
 }
 
-let televisor1 = new Televisor(49, "Samsung", "UH7000");
-let smartTV1 = new SmartTV(70, "Sony", "SYS8670");
+let televisor1:Televisor = new Televisor(49, "Samsung", "UH7000");
+let smartTV1:SmartTV = new SmartTV(70, "Sony", "SYS8670");
 
 console.log(televisor1);
 console.log(smartTV1);
+
+smartTV1.setPulgadas(13);
+smartTV1.getPulgadas();
