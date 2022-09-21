@@ -75,5 +75,5 @@ let smartTV1:SmartTV = new SmartTV(70, "Sony", "SYS8670");
 console.log(televisor1);
 console.log(smartTV1);
 
-smartTV1.setPulgadas(13);
-smartTV1.getPulgadas();
+console.log(smartTV1.setPulgadas(13));
+console.log(smartTV1.getPulgadas());
