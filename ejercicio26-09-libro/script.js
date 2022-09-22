@@ -50,5 +50,5 @@ var libro2 = new Libro("Caperucita", "Pampita", "Transfer", 2006);
 var libro3 = new Libro("Señor Tuesday", "Richard", "Transfer", 1970);
 var libroNuevo = new Libro("Nuevo Libro", "Jesús", "Biblia", 1500);
 var arrayLibros = [libro1, libro2, libro3];
-var GestorDeLibros1 = new GestorDeLibros(arrayLibros);
-console.log(GestorDeLibros1.insertarLibro(libroNuevo));
+var gestorDeLibros1 = new GestorDeLibros(arrayLibros);
+console.log(gestorDeLibros1.insertarLibro(libroNuevo));
