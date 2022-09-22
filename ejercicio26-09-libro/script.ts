@@ -15,7 +15,7 @@ class Libro {
         return this.titulo;
     }
 
-    public setTitulo(nombre: string) {
+    public setTitulo(nombre: string): void {
         this.titulo = nombre;
     }
 
@@ -23,7 +23,7 @@ class Libro {
         return this.autor;
     }
 
-    public setAutor(nombre: string) {
+    public setAutor(nombre: string): void {
         this.autor = nombre;
     }
 
@@ -31,7 +31,7 @@ class Libro {
         return this.editorial;
     }
 
-    public setEditorial(nombre: string) {
+    public setEditorial(nombre: string): void {
         this.editorial = nombre;
     }
 
@@ -39,7 +39,7 @@ class Libro {
         return this.anio;
     }
 
-    public setAnio(anio: number) {
+    public setAnio(anio: number): void {
         this.anio = anio;
     }
 }
@@ -51,32 +51,50 @@ class GestorDeLibros {
         this.listadoDeLibros = pListado;
     }
 
-    public insertarLibro(libro: Libro) {
+    public insertarLibro(libro: Libro): void {
         this.listadoDeLibros.push(libro);
-        console.log(`El libro ${libro.getTitulo()}, del autor ${libro.getAutor()}, de la editorial ${libro.getEditorial()}, del año ${libro.getAnio()}, fue agregado`);
+        console.log(`El libro "${libro.getTitulo()}", del autor ${libro.getAutor()}, de la editorial ${libro.getEditorial()}, del año ${libro.getAnio()}, fue agregado al listado`);
     }
 
-    public eliminarLibro() {
-
+    public eliminarLibro(nombreLibro: string): void {
+        for (let i: number = 0; i < this.listadoDeLibros.length; i++) {
+            if (nombreLibro === this.listadoDeLibros[i].getTitulo()) {
+                this.listadoDeLibros.splice(i, 1);
+                return console.log(`El libro "${nombreLibro}" fue eliminado del listado`);
+            }     
+        }
+        return console.log(`No se encontró el libro "${nombreLibro}" en el listado`);
     }
 
-    public modificarLibro() {
+/*     public modificarAnioLibro(posicion: number, anioLibro: number): void {
+        this.listadoDeLibros.splice(3, 1, 'anioLibro');
+        return console.log(`El año del libro "${this.listadoDeLibros[posicion]}" cambió a ${anioLibro}`);
+    }   */   
 
+    public consultarLibro(nombreLibro: string): void {
+        for (let i: number = 0; i < this.listadoDeLibros.length; i++) {
+            if (nombreLibro === this.listadoDeLibros[i].getTitulo()) {
+                return console.log(this.listadoDeLibros[i]);
+            }
+        }
+        return console.log(`No se encontró el libro "${nombreLibro}" en el listado`);
     }
-
-/*     public consultarLibro(libro: Libro) {
-        return this.listadoDeLibros;
-    } */
 }
 
-let libro1 = new Libro("Hojalata", "Pepe", "Transfer", 1990);
-let libro2 = new Libro("Caperucita", "Pampita", "Transfer", 2006);
-let libro3 = new Libro("Señor Tuesday", "Richard", "Transfer", 1970);
 
-let libroNuevo = new Libro("Nuevo Libro", "Jesús", "Biblia", 1500);
+let libro1 = new Libro("El Principito", "Antoine de Saint-Exupéry", "ABC", 1943);
+let libro2 = new Libro("Pinocho", "Carlo Collodi", "Mundo", 1883);
+let libro3 = new Libro("Caperucita Roja", "Hermanos Grimm", "Space", 1812);
+
+let libroNuevo = new Libro("Harry Potter", "J. K. Rowling", "Patagonia", 1997);
 
 let arrayLibros: Libro[] = [libro1, libro2, libro3];
 
 let gestorDeLibros1 = new GestorDeLibros(arrayLibros);
 
-console.log(gestorDeLibros1.insertarLibro(libroNuevo));
+gestorDeLibros1.insertarLibro(libroNuevo);
+gestorDeLibros1.eliminarLibro("Pinocho");
+gestorDeLibros1.eliminarLibro("Star Wars");
+gestorDeLibros1.consultarLibro("Caperucita Roja");
+gestorDeLibros1.consultarLibro("Red");
+console.log(gestorDeLibros1);

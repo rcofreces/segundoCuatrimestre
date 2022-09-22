@@ -37,18 +37,45 @@ var GestorDeLibros = /** @class */ (function () {
     }
     GestorDeLibros.prototype.insertarLibro = function (libro) {
         this.listadoDeLibros.push(libro);
-        console.log("El libro ".concat(libro.getTitulo(), ", del autor ").concat(libro.getAutor(), ", de la editorial ").concat(libro.getEditorial(), ", del a\u00F1o ").concat(libro.getAnio(), ", fue agregado"));
+        console.log("El libro \"".concat(libro.getTitulo(), "\", del autor ").concat(libro.getAutor(), ", de la editorial ").concat(libro.getEditorial(), ", del a\u00F1o ").concat(libro.getAnio(), ", fue agregado al listado"));
     };
-    GestorDeLibros.prototype.eliminarLibro = function () {
+    GestorDeLibros.prototype.eliminarLibro = function (nombreLibro) {
+        for (var i = 0; i < this.listadoDeLibros.length; i++) {
+            if (nombreLibro === this.listadoDeLibros[i].getTitulo()) {
+                this.listadoDeLibros.splice(i, 1);
+                return console.log("El libro \"".concat(nombreLibro, "\" fue eliminado del listado"));
+            }
+        }
+        return console.log("No se encontr\u00F3 el libro \"".concat(nombreLibro, "\" en el listado"));
     };
-    GestorDeLibros.prototype.modificarLibro = function () {
+    /*     public modificarAnioLibro(anioLibro: number): void {
+            for (let i: number = 0; i < this.listadoDeLibros.length; i++) {
+                if (nombreLibro === this.listadoDeLibros[i].getTitulo()) {
+                    return console.log(this.listadoDeLibros[i]);
+                }
+            }
+            return console.log(`No se encontró el libro "${nombreLibro}" en el listado`);
+        }
+     */
+    GestorDeLibros.prototype.consultarLibro = function (nombreLibro) {
+        for (var i = 0; i < this.listadoDeLibros.length; i++) {
+            if (nombreLibro === this.listadoDeLibros[i].getTitulo()) {
+                return console.log(this.listadoDeLibros[i]);
+            }
+        }
+        return console.log("No se encontr\u00F3 el libro \"".concat(nombreLibro, "\" en el listado"));
     };
     return GestorDeLibros;
 }());
-var libro1 = new Libro("Hojalata", "Pepe", "Transfer", 1990);
-var libro2 = new Libro("Caperucita", "Pampita", "Transfer", 2006);
-var libro3 = new Libro("Señor Tuesday", "Richard", "Transfer", 1970);
-var libroNuevo = new Libro("Nuevo Libro", "Jesús", "Biblia", 1500);
+var libro1 = new Libro("El Principito", "Antoine de Saint-Exupéry", "ABC", 1943);
+var libro2 = new Libro("Pinocho", "Carlo Collodi", "Mundo", 1883);
+var libro3 = new Libro("Caperucita Roja", "Hermanos Grimm", "Space", 1812);
+var libroNuevo = new Libro("Harry Potter", "J. K. Rowling", "Patagonia", 1997);
 var arrayLibros = [libro1, libro2, libro3];
 var gestorDeLibros1 = new GestorDeLibros(arrayLibros);
-console.log(gestorDeLibros1.insertarLibro(libroNuevo));
+gestorDeLibros1.insertarLibro(libroNuevo);
+gestorDeLibros1.eliminarLibro("Pinocho");
+gestorDeLibros1.eliminarLibro("Star Wars");
+gestorDeLibros1.consultarLibro("Caperucita Roja");
+gestorDeLibros1.consultarLibro("Red");
+console.log(gestorDeLibros1);
