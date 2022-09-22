@@ -22,7 +22,8 @@ var Telefono = /** @class */ (function () {
         console.log("Se envi\u00F3 el siguiente mensaje: ".concat(mensaje));
     };
     Telefono.prototype.hacerLlamada = function (persona) {
-        console.log("Usted est\u00E1 llamando a ".concat(persona));
+        var who = persona;
+        console.log("Usted est\u00E1 llamando a ".concat(who));
     };
     Telefono.prototype.prenderApagar = function () {
         if (this.estaPrendido = false) {

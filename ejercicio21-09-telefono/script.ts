@@ -7,15 +7,17 @@ class Telefono {
         this.bateriaActual = pBateriaActual;
     }
 
-    public mandarMensaje(mensaje: string) {
-        console.log(`Se envió el siguiente mensaje: ${mensaje}`);
+    public mandarMensaje(mensaje: string): void {
+        let mensaje1: string = mensaje; 
+        console.log(`Se envió el siguiente mensaje: ${mensaje1}`);
     }
 
-    public hacerLlamada(persona:string) {
-        console.log(`Usted está llamando a ${persona}`);
+    public hacerLlamada(persona:string): void {
+        let quien: string = persona;
+        console.log(`Usted está llamando a ${quien}`);
     }
 
-    public prenderApagar():boolean {
+    public prenderApagar(): boolean {
         if (this.estaPrendido = false) {
             return true;
         } else {
