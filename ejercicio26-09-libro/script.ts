@@ -98,11 +98,11 @@ let arrayLibros: Libro[] = [libro1, libro2, libro3];
 
 let gestorDeLibros1 = new GestorDeLibros(arrayLibros);
 
-/* gestorDeLibros1.insertarLibro(libroNuevo);
+gestorDeLibros1.insertarLibro(libroNuevo);
 gestorDeLibros1.eliminarLibro("Pinocho");
 gestorDeLibros1.eliminarLibro("Star Wars");
 gestorDeLibros1.consultarLibro("Caperucita Roja");
 gestorDeLibros1.consultarLibro("Red");
-console.log(gestorDeLibros1); */
-
-gestorDeLibros1.modificarLibro("Pinocho", "Industrial", 2013);
+console.log(gestorDeLibros1);
+gestorDeLibros1.modificarLibro("Pinocho", "Nueva Editorial", 2013);
+console.log(gestorDeLibros1);
