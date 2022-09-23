@@ -8,13 +8,11 @@ class Telefono {
     }
 
     public mandarMensaje(mensaje: string): void {
-        let mensaje1: string = mensaje; 
-        console.log(`Se envió el siguiente mensaje: ${mensaje1}`);
+        console.log(`Se envió el siguiente mensaje: ${mensaje}`);
     }
 
     public hacerLlamada(persona:string): void {
-        let quien: string = persona;
-        console.log(`Usted está llamando a ${quien}`);
+        console.log(`Usted está llamando a ${persona}`);
     }
 
     public prenderApagar(): boolean {
@@ -31,7 +29,7 @@ class TelefonoConCamara extends Telefono {
         super(pEstaPrendido, pBateriaActual);
     }
 
-    public sacarFoto() {
+    public sacarFoto(): void {
         console.log(`Usted sacó una foto`);
     }
 }
@@ -53,6 +51,6 @@ let telefono1: Telefono = new Telefono(false, 100);
 let telefonoConCamara1: TelefonoConCamara = new TelefonoConCamara(true, 67);
 let telefonoConRadio1: TelefonoConRadio = new TelefonoConRadio(false, 50, 1567);
 
-console.log(telefono1.hacerLlamada("Juan"));
-console.log(telefonoConCamara1.sacarFoto());
+telefono1.hacerLlamada("Juan");
+telefonoConCamara1.sacarFoto();
 console.log(telefonoConRadio1.verFrecuenciaActual());

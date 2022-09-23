@@ -22,8 +22,7 @@ var Telefono = /** @class */ (function () {
         console.log("Se envi\u00F3 el siguiente mensaje: ".concat(mensaje));
     };
     Telefono.prototype.hacerLlamada = function (persona) {
-        var who = persona;
-        console.log("Usted est\u00E1 llamando a ".concat(who));
+        console.log("Usted est\u00E1 llamando a ".concat(persona));
     };
     Telefono.prototype.prenderApagar = function () {
         if (this.estaPrendido = false) {
@@ -60,6 +59,6 @@ var TelefonoConRadio = /** @class */ (function (_super) {
 var telefono1 = new Telefono(false, 100);
 var telefonoConCamara1 = new TelefonoConCamara(true, 67);
 var telefonoConRadio1 = new TelefonoConRadio(false, 50, 1567);
-console.log(telefono1.hacerLlamada("Juan"));
-console.log(telefonoConCamara1.sacarFoto());
+telefono1.hacerLlamada("Juan");
+telefonoConCamara1.sacarFoto();
 console.log(telefonoConRadio1.verFrecuenciaActual());
