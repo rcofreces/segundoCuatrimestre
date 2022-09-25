@@ -138,12 +138,10 @@ class SistemaEducativo {
         for (let i: number = 0; i < this.listadoProfesores.length; i++) {
             if (profesor.getApellido() === this.listadoProfesores[i].getApellido()) {
                 this.listadoProfesores.splice(i, 1);
-                console.log(`Profesor ${profesor.getNombre()} ${profesor.getApellido()} despedido`);
-            } else {
-                console.log(`No se encontró al profesor ${profesor.getNombre()} ${profesor.getApellido()}`);
+                return console.log(`Profesor ${profesor.getNombre()} ${profesor.getApellido()} despedido`);
             }
-            i++;
         }
+        return console.log(`No se encontró al profesor ${profesor.getNombre()} ${profesor.getApellido()}`);
     }
 
     public matricularAlumno(alumno: Alumno) {
