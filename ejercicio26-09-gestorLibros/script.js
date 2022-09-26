@@ -1,3 +1,6 @@
+"use strict";
+exports.__esModule = true;
+var fs = require("fs");
 var Libro = /** @class */ (function () {
     function Libro(pTitulo, pAutor, pEditorial, pAnio) {
         this.titulo = pTitulo;
@@ -74,11 +77,13 @@ var libro3 = new Libro("Caperucita Roja", "Hermanos Grimm", "Space", 1812);
 var libroNuevo = new Libro("Harry Potter", "J. K. Rowling", "Patagonia", 1997);
 var arrayLibros = [libro1, libro2, libro3];
 var gestorDeLibros1 = new GestorDeLibros(arrayLibros);
-/* gestorDeLibros1.insertarLibro(libroNuevo);
+gestorDeLibros1.insertarLibro(libroNuevo);
 gestorDeLibros1.eliminarLibro("Pinocho");
 gestorDeLibros1.eliminarLibro("Star Wars");
 gestorDeLibros1.consultarLibro("Caperucita Roja");
 gestorDeLibros1.consultarLibro("Red");
-console.log(gestorDeLibros1); */
-gestorDeLibros1.modificarLibro("Pinocho", "Industrial", 2013);
 console.log(gestorDeLibros1);
+gestorDeLibros1.modificarLibro("Pinocho", "Nueva Editorial", 2013);
+console.log(gestorDeLibros1);
+var texto = fs.readFileSync('100 años de soledad.txt', 'utf-8');
+console.log(texto);

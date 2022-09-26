@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+
 class Libro {
     private titulo: string;
     private autor: string;
@@ -106,3 +108,6 @@ gestorDeLibros1.consultarLibro("Red");
 console.log(gestorDeLibros1);
 gestorDeLibros1.modificarLibro("Pinocho", "Nueva Editorial", 2013);
 console.log(gestorDeLibros1);
+
+let texto: string = fs.readFileSync('100 años de soledad.txt', 'utf-8');
+console.log(texto);
