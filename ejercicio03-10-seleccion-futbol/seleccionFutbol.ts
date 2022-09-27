@@ -69,4 +69,4 @@ export class SeleccionFutbol{
   }
 }
 
-let seleccion1 = new SeleccionFutbol("Argentina");
+// let seleccion1 = new SeleccionFutbol("Argentina");
