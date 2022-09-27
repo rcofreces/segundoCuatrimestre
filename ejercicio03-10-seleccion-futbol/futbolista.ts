@@ -14,18 +14,39 @@ export class Futbolista extends Persona {
     return this.dorsal;
   }
 
-  private setDorsal(dorsal: number): number {
+  public setDorsal(dorsal: number): void {
     this.dorsal = dorsal;
-    return this.dorsal;
   }
 
   public getEquipo(): string {
     return this.equipo;
   }
 
-  private setEquipo(equipo: string): string {
+  public setEquipo(equipo: string): void {
     this.equipo = equipo;
-    return this.equipo;
   }
 
 }
+
+let futbolista1 = new Futbolista("Diego", "Maradona", 10, "Boca Juniors");
+let futbolista2 = new Futbolista("Lionel", "Messi", 30, "Barcelona");
+
+let listadoFutbolista: Futbolista[] = [futbolista1, futbolista2];
+console.log(listadoFutbolista);
+
+console.log(futbolista1.getNombre());
+console.log(futbolista2.getApellido());
+
+futbolista1.setApellido("Pelé");
+futbolista2.setNombre("Román");
+
+console.log(futbolista1.getApellido());
+console.log(futbolista2.getNombre());
+
+console.log(futbolista1.getDorsal());
+futbolista2.setDorsal(99);
+console.log(futbolista2.getDorsal());
+
+console.log(futbolista1.getEquipo());
+futbolista2.setEquipo("San Lorenzo");
+console.log(futbolista2.getEquipo());

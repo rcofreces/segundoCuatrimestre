@@ -69,3 +69,5 @@ export class SeleccionFutbol{
     return console.log(`No se encontró al masajista ${masajista.getNombre()} ${masajista.getApellido()}`);
   }
 }
+
+let seleccion1 = new SeleccionFutbol("Argentina");

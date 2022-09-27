@@ -8,13 +8,12 @@ export class Masajista extends Persona {
     this.sueldo = pSueldo;
   }
 
-  private getSueldo(): number {
+  public getSueldo(): number {
     return this.sueldo;
   }
 
-  private setSueldo(sueldo: number): number {
+  public setSueldo(sueldo: number): void {
     this.sueldo = sueldo;
-    return this.sueldo;
   }
 
   public darMasaje(): void {
@@ -22,3 +21,24 @@ export class Masajista extends Persona {
   }
 
 }
+
+let masajista1 = new Masajista("María", "Alvarez", 3000);
+let masajista2 = new Masajista("Nicolás", "Gómez", 2500);
+
+let listadoMasajista: Masajista[] = [masajista1, masajista2];
+console.log(listadoMasajista);
+
+console.log(masajista1.getNombre());
+console.log(masajista2.getApellido());
+
+masajista1.setApellido("Tito");
+masajista2.setNombre("Patricio");
+
+console.log(masajista1.getApellido());
+console.log(masajista2.getNombre());
+
+console.log(masajista1.getSueldo());
+masajista2.setSueldo(10000);
+console.log(masajista2.getSueldo());
+
+masajista2.darMasaje();
