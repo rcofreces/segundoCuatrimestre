@@ -59,14 +59,6 @@ class SmartTV extends Televisor {
             return false;
         }
     }
-
-    public getPulgadas():number {
-        return this.pulgadas;
-    }
-
-    public setPulgadas(cantidad:number) {
-        this.pulgadas = cantidad;
-    }
 }
 
 let televisor1:Televisor = new Televisor(49, "Samsung", "UH7000");
