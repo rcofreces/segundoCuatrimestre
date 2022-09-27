@@ -1,12 +1,13 @@
-import { SeleccionFutbol } from "./seleccionFubtol";
+import { SeleccionFutbol } from "./seleccionFutbol";
 
 export class Masajista extends SeleccionFutbol {
   private nombre: string;
   private apellido: string;
   private sueldo: number;
+  private listadoFutbolista: Futbolista[];
   
   constructor(pPais: string, pFutbolista: Futbolista[], pEntrenador: Entrenador[], pMasajista: Masajista[], pNombre: string, pApellido: string, pSueldo: number) {
-    super(pPais, pFutbolista, pEntrenador, pMasajista)
+    super(pPais, pFutbolista, pEntrenador, pMasajista);
     this.nombre = pNombre;
     this.apellido = pApellido;
     this.sueldo = pSueldo;
@@ -37,6 +38,10 @@ export class Masajista extends SeleccionFutbol {
   private setSueldo(sueldo: number): number {
     this.sueldo = sueldo;
     return this.sueldo;
+  }
+
+  public darMasaje(): void {
+    return console.log(`Usted ha recibido un masaje`);
   }
 
 }

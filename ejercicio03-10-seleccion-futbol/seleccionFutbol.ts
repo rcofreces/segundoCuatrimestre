@@ -64,5 +64,4 @@ export class SeleccionFutbol{
     }
     return console.log(`No se encontró al masajista ${masajista.getNombre()} ${masajista.getApellido()}`);
   }
-
 }

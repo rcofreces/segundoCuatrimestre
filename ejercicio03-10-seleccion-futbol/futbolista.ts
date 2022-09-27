@@ -1,6 +1,5 @@
 import { SeleccionFutbol } from "./seleccionFutbol";
 
-
 export class Futbolista extends SeleccionFutbol {
   private nombre: string;
   private apellido: string;
