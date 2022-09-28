@@ -24,8 +24,8 @@ export class Persona {
   }
 }
 
-let persona1 = new Persona("Ricardo", "Gramuglia");
-let persona2 = new Persona("Eduardo", "Caballero");
+let persona1: Persona = new Persona("Ricardo", "Gramuglia");
+let persona2: Persona = new Persona("Eduardo", "Caballero");
 
 console.log(persona1.getNombre());
 console.log(persona2.getApellido());

@@ -1,7 +1,7 @@
 import { Persona } from "./persona";
 
 export class Entrenador extends Persona {
-  private nacionalidad: string;
+  protected nacionalidad: string;
 
   constructor(pNombre: string, pApellido: string, pNacionalidad: string) {
     super(pNombre, pApellido);
@@ -22,8 +22,8 @@ export class Entrenador extends Persona {
 
 }
 
-let entrenador1 = new Entrenador("Pep", "Guardiola", "Español");
-let entrenador2 = new Entrenador("Zinedine", "Zidane", "Francés");
+let entrenador1: Entrenador = new Entrenador("Pep", "Guardiola", "Español");
+let entrenador2: Entrenador = new Entrenador("Zinedine", "Zidane", "Francés");
 
 let listadoEntrenador: Entrenador[] = [entrenador1, entrenador2];
 console.log(listadoEntrenador);

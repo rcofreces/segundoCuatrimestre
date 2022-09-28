@@ -2,11 +2,11 @@ import { Futbolista } from "./futbolista";
 import { Entrenador } from "./entrenador";
 import { Masajista } from "./masajista";
 
-export class SeleccionFutbol{
-  private pais: string;
-  private listadoFutbolista: Futbolista[];
-  private listadoEntrenador: Entrenador[];
-  private listadoMasajista: Masajista[];
+export class SeleccionFutbol {
+  protected pais: string;
+  protected listadoFutbolista: Futbolista[];
+  protected listadoEntrenador: Entrenador[];
+  protected listadoMasajista: Masajista[];
   
   constructor(pPais: string, pFutbolista: Futbolista[], pEntrenador: Entrenador[], pMasajista: Masajista[]) {
     this.pais = pPais;
@@ -69,4 +69,4 @@ export class SeleccionFutbol{
   }
 }
 
-// let seleccion1 = new SeleccionFutbol("Argentina");
+let seleccion1: SeleccionFutbol = new SeleccionFutbol("Argentina");

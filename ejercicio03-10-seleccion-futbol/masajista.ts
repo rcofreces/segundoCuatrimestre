@@ -1,7 +1,7 @@
 import { Persona } from "./persona";
 
 export class Masajista extends Persona {
-  private sueldo: number;
+  protected sueldo: number;
   
   constructor(pNombre: string, pApellido: string, pSueldo: number) {
     super(pNombre, pApellido);
@@ -22,8 +22,8 @@ export class Masajista extends Persona {
 
 }
 
-let masajista1 = new Masajista("María", "Alvarez", 3000);
-let masajista2 = new Masajista("Nicolás", "Gómez", 2500);
+let masajista1: Masajista = new Masajista("María", "Alvarez", 3000);
+let masajista2: Masajista = new Masajista("Nicolás", "Gómez", 2500);
 
 let listadoMasajista: Masajista[] = [masajista1, masajista2];
 console.log(listadoMasajista);

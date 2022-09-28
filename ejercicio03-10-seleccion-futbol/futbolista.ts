@@ -1,8 +1,8 @@
 import { Persona } from "./persona";
 
 export class Futbolista extends Persona {
-  private dorsal: number;
-  private equipo: string;
+  protected dorsal: number;
+  protected equipo: string;
   
   constructor(pNombre: string, pApellido: string, pDorsal: number, pEquipo: string) {
     super(pNombre, pApellido);
@@ -29,11 +29,10 @@ export class Futbolista extends Persona {
   public jugarPartido(): void {
     return console.log(`El futbolista ha jugado un partido`);
   }
-
 }
 
-let futbolista1 = new Futbolista("Diego", "Maradona", 10, "Boca Juniors");
-let futbolista2 = new Futbolista("Lionel", "Messi", 30, "Barcelona");
+let futbolista1: Futbolista = new Futbolista("Diego", "Maradona", 10, "Boca Juniors");
+let futbolista2: Futbolista = new Futbolista("Lionel", "Messi", 30, "Barcelona");
 
 let listadoFutbolista: Futbolista[] = [futbolista1, futbolista2];
 console.log(listadoFutbolista);
