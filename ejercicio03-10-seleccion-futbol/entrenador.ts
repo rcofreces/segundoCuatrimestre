@@ -16,6 +16,10 @@ export class Entrenador extends Persona {
     this.nacionalidad = nacionalidad;
   }
 
+  public realizarEntrenamiento(): void {
+    return console.log(`El entrenador ha realizado un entrenamiento`);
+  }
+
 }
 
 let entrenador1 = new Entrenador("Pep", "Guardiola", "Español");
@@ -36,3 +40,5 @@ console.log(entrenador2.getNombre());
 console.log(entrenador1.getNacionalidad());
 entrenador2.setNacionalidad("Argentino");
 console.log(entrenador2.getNacionalidad());
+
+entrenador1.realizarEntrenamiento();

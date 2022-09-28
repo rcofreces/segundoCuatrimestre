@@ -30,6 +30,9 @@ var Entrenador = /** @class */ (function (_super) {
     Entrenador.prototype.setNacionalidad = function (nacionalidad) {
         this.nacionalidad = nacionalidad;
     };
+    Entrenador.prototype.realizarEntrenamiento = function () {
+        return console.log("El entrenador ha realizado un entrenamiento");
+    };
     return Entrenador;
 }(persona_1.Persona));
 exports.Entrenador = Entrenador;
@@ -46,3 +49,4 @@ console.log(entrenador2.getNombre());
 console.log(entrenador1.getNacionalidad());
 entrenador2.setNacionalidad("Argentino");
 console.log(entrenador2.getNacionalidad());
+entrenador1.realizarEntrenamiento();

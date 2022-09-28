@@ -26,6 +26,10 @@ export class Futbolista extends Persona {
     this.equipo = equipo;
   }
 
+  public jugarPartido(): void {
+    return console.log(`El futbolista ha jugado un partido`);
+  }
+
 }
 
 let futbolista1 = new Futbolista("Diego", "Maradona", 10, "Boca Juniors");
@@ -50,3 +54,5 @@ console.log(futbolista2.getDorsal());
 console.log(futbolista1.getEquipo());
 futbolista2.setEquipo("San Lorenzo");
 console.log(futbolista2.getEquipo());
+
+futbolista1.jugarPartido();

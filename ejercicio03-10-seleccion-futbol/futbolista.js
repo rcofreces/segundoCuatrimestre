@@ -37,6 +37,9 @@ var Futbolista = /** @class */ (function (_super) {
     Futbolista.prototype.setEquipo = function (equipo) {
         this.equipo = equipo;
     };
+    Futbolista.prototype.jugarPartido = function () {
+        return console.log("El futbolista ha jugado un partido");
+    };
     return Futbolista;
 }(persona_1.Persona));
 exports.Futbolista = Futbolista;
@@ -56,3 +59,4 @@ console.log(futbolista2.getDorsal());
 console.log(futbolista1.getEquipo());
 futbolista2.setEquipo("San Lorenzo");
 console.log(futbolista2.getEquipo());
+futbolista1.jugarPartido();
