@@ -24,8 +24,8 @@ var Omnivoro = /** @class */ (function (_super) {
         _this.cuadripedo = cuadripedo;
         return _this;
     }
-    Omnivoro.prototype.esCuadripedo = function (parametro) {
-        if (parametro = true) {
+    Omnivoro.prototype.esCuadripedo = function () {
+        if (this.cuadripedo === true) {
             console.log("El animal es cuadripedo");
         }
         else {

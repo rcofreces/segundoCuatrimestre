@@ -8,9 +8,8 @@ export class Omnivoro extends Mamifero {
         this.cuadripedo = cuadripedo;
     }
 
-    public esCuadripedo(parametro: boolean): void {
-        for (let i: number = 0; i < 
-            if (parametro = true) {
+    public esCuadripedo(): void {
+        if (this.cuadripedo === true) {
             console.log(`El animal es cuadripedo`);
         } else {
             console.log(`El animal no es cuadripedo`);

@@ -49,7 +49,7 @@ carnivoro1.setPeso(1200);
 console.log(carnivoro1.getPeso());
 
 carnivoro2.comer(); */
-var omnivoro1 = new ominovoro_1.Omnivoro("oso", "macho", false);
+var omnivoro1 = new ominovoro_1.Omnivoro("oso", "macho", true);
 var omnivoro2 = new ominovoro_1.Omnivoro("gallina", "hembra", false);
 // let arrayOmnivoros: Omnivoros = [omnivoro1, omnivoro2];
 /* console.log(omnivoro1.getEspecie());
@@ -59,6 +59,6 @@ console.log(omnivoro1.getEspecie());
 console.log(omnivoro2.getSexo());
 omnivoro2.setSexo("macho");
 console.log(omnivoro2.getSexo()); */
-omnivoro1.esCuadripedo(true);
-omnivoro2.esCuadripedo(false);
+omnivoro1.esCuadripedo();
+omnivoro2.esCuadripedo();
 // omnivoro1.comer();
