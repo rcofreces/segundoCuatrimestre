@@ -9,7 +9,7 @@ export class Gato extends Animal implements Mascota {
         this.nombre = nombre;
     }
 
-    public comer() {
+    public comer(): void {
         console.log(`El gato está comiendo`);
     }
 

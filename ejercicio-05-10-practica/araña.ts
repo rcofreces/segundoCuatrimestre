@@ -1,6 +1,6 @@
 import { Animal } from "./animal";
 
-class Arania extends Animal {
+export class Araña extends Animal {
 
     constructor(pPatas: number) {
         super(pPatas);
