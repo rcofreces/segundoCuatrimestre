@@ -1,8 +1,8 @@
 import { Persona } from "./persona";
 
 export class Futbolista extends Persona {
-  protected dorsal: number;
-  protected equipo: string;
+  private dorsal: number;
+  private equipo: string;
   
   constructor(pNombre: string, pApellido: string, pDorsal: number, pEquipo: string) {
     super(pNombre, pApellido);
@@ -27,6 +27,6 @@ export class Futbolista extends Persona {
   }
 
   public jugarPartido(): void {
-    return console.log(`El futbolista ha jugado un partido`);
+    console.log(`El futbolista ha jugado un partido`);
   }
 }

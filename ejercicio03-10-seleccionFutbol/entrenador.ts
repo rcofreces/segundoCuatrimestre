@@ -1,7 +1,7 @@
 import { Persona } from "./persona";
 
 export class Entrenador extends Persona {
-  protected nacionalidad: string;
+  private nacionalidad: string;
 
   constructor(pNombre: string, pApellido: string, pNacionalidad: string) {
     super(pNombre, pApellido);
@@ -17,7 +17,7 @@ export class Entrenador extends Persona {
   }
 
   public realizarEntrenamiento(): void {
-    return console.log(`El entrenador ha realizado un entrenamiento`); 
+    console.log(`El entrenador ha realizado un entrenamiento`); 
   }
 
 }

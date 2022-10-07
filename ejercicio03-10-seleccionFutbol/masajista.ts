@@ -1,7 +1,7 @@
 import { Persona } from "./persona";
 
 export class Masajista extends Persona {
-  protected sueldo: number;
+  private sueldo: number;
   
   constructor(pNombre: string, pApellido: string, pSueldo: number) {
     super(pNombre, pApellido);
@@ -17,7 +17,7 @@ export class Masajista extends Persona {
   }
 
   public darMasaje(): void {
-    return console.log(`Usted ha recibido un masaje`);
+    console.log(`Usted ha recibido un masaje`);
   }
 
 }

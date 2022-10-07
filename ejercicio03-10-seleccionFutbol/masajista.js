@@ -31,7 +31,7 @@ var Masajista = /** @class */ (function (_super) {
         this.sueldo = sueldo;
     };
     Masajista.prototype.darMasaje = function () {
-        return console.log("Usted ha recibido un masaje");
+        console.log("Usted ha recibido un masaje");
     };
     return Masajista;
 }(persona_1.Persona));

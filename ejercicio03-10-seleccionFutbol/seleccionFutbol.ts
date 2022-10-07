@@ -3,10 +3,10 @@ import { Entrenador } from "./entrenador";
 import { Masajista } from "./masajista";
 
 export class SeleccionFutbol {
-  protected pais: string;
-  protected listadoFutbolista: Futbolista[];
-  protected listadoEntrenador: Entrenador[];
-  protected listadoMasajista: Masajista[];
+  private pais: string;
+  private listadoFutbolista: Futbolista[];
+  private listadoEntrenador: Entrenador[];
+  private listadoMasajista: Masajista[];
   
   constructor(pPais: string, pFutbolista: Futbolista[], pEntrenador: Entrenador[], pMasajista: Masajista[]) {
     this.pais = pPais;
@@ -29,13 +29,18 @@ export class SeleccionFutbol {
   }
 
   public despedirFutbolista(futbolista: Futbolista): void {
+    let encontrado: boolean = false;
     for (let i: number = 0; i < this.listadoFutbolista.length; i++) {
       if ((futbolista.getNombre() === this.listadoFutbolista[i].getNombre()) && (futbolista.getApellido() === this.listadoFutbolista[i].getApellido())) {
         this.listadoFutbolista.splice(i, 1);
-        return console.log(`El futbolista ${futbolista.getNombre()} ${futbolista.getApellido()} fue despedido`);
+        encontrado = true;
       }
     }
-    return console.log(`No se encontró al futbolista ${futbolista.getNombre()} ${futbolista.getApellido()}`);
+    if (encontrado === true) {
+      console.log(`El futbolista ${futbolista.getNombre()} ${futbolista.getApellido()} fue despedido`);
+    } else {
+      console.log(`No se encontró al futbolista ${futbolista.getNombre()} ${futbolista.getApellido()}`);
+    }
   }
 
   public contratarEntrenador(entrenador: Entrenador): void {
@@ -44,13 +49,18 @@ export class SeleccionFutbol {
   }
   
   public despedirEntrenador(entrenador: Entrenador): void {
+    let encontrado: boolean = false;
     for (let i: number = 0; i < this.listadoEntrenador.length; i++) {
       if ((entrenador.getNombre() === this.listadoEntrenador[i].getNombre()) && (entrenador.getApellido() === this.listadoEntrenador[i].getApellido())) {
         this.listadoEntrenador.splice(i, 1);
-        return console.log(`El entrenador ${entrenador.getNombre()} ${entrenador.getApellido()} fue despedido`);
+        encontrado = true;
       }
     }
-    return console.log(`No se encontró al entrenador ${entrenador.getNombre()} ${entrenador.getApellido()}`);
+    if (encontrado === true) {
+      console.log(`El entrenador ${entrenador.getNombre()} ${entrenador.getApellido()} fue despedido`);
+    } else {
+      console.log(`No se encontró al entrenador ${entrenador.getNombre()} ${entrenador.getApellido()}`);
+    }
   }
   
   public contratarMasajista(masajista: Masajista): void {
@@ -59,12 +69,17 @@ export class SeleccionFutbol {
   }
   
   public despedirMasajista(masajista: Masajista): void {
+    let encontrado: boolean = false;
     for (let i: number = 0; i < this.listadoMasajista.length; i++) {
       if ((masajista.getNombre() === this.listadoMasajista[i].getNombre()) && (masajista.getApellido() === this.listadoMasajista[i].getApellido())) {
         this.listadoMasajista.splice(i, 1);
-        return console.log(`El masajista ${masajista.getNombre()} ${masajista.getApellido()} fue despedido`);
+        encontrado = true;
       }
     }
-    return console.log(`No se encontró al masajista ${masajista.getNombre()} ${masajista.getApellido()}`);
+    if (encontrado === true) {
+      console.log(`El masajista ${masajista.getNombre()} ${masajista.getApellido()} fue despedido`);
+    } else {
+      console.log(`No se encontró al masajista ${masajista.getNombre()} ${masajista.getApellido()}`);
+    }
   }
 }

@@ -44,7 +44,7 @@ console.log(futbolista2.getEquipo());
 futbolista1.jugarPartido();
 
  /* Entrenador */
- let entrenador1: Entrenador = new Entrenador("Pep", "Guardiola", "Español");
+let entrenador1: Entrenador = new Entrenador("Pep", "Guardiola", "Español");
 let entrenador2: Entrenador = new Entrenador("Zinedine", "Zidane", "Francés");
 
 let listadoEntrenador: Entrenador[] = [entrenador1, entrenador2];

@@ -38,7 +38,7 @@ var Futbolista = /** @class */ (function (_super) {
         this.equipo = equipo;
     };
     Futbolista.prototype.jugarPartido = function () {
-        return console.log("El futbolista ha jugado un partido");
+        console.log("El futbolista ha jugado un partido");
     };
     return Futbolista;
 }(persona_1.Persona));

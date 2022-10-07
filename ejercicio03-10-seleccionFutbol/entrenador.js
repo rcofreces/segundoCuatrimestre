@@ -31,7 +31,7 @@ var Entrenador = /** @class */ (function (_super) {
         this.nacionalidad = nacionalidad;
     };
     Entrenador.prototype.realizarEntrenamiento = function () {
-        return console.log("El entrenador ha realizado un entrenamiento");
+        console.log("El entrenador ha realizado un entrenamiento");
     };
     return Entrenador;
 }(persona_1.Persona));
