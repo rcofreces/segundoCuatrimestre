@@ -17,7 +17,7 @@ export class Entrenador extends Persona {
   }
 
   public realizarEntrenamiento(): void {
-    return console.log(`El entrenador ha realizado un entrenamiento`);
+    return console.log(`El entrenador ha realizado un entrenamiento`); 
   }
 
 }
