@@ -31,7 +31,7 @@ var Carnivoro = /** @class */ (function (_super) {
         this.peso = peso;
     };
     Carnivoro.prototype.comer = function () {
-        return console.log("El animal come carne");
+        console.log("El animal come carne");
     };
     return Carnivoro;
 }(mamifero_1.Mamifero));

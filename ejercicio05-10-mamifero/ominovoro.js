@@ -33,7 +33,7 @@ var Omnivoro = /** @class */ (function (_super) {
         }
     };
     Omnivoro.prototype.comer = function () {
-        return console.log("El animal come plantas y carne");
+        console.log("El animal come plantas y carne");
     };
     return Omnivoro;
 }(mamifero_1.Mamifero));

@@ -31,7 +31,7 @@ var Herbivoro = /** @class */ (function (_super) {
         this.color = color;
     };
     Herbivoro.prototype.comer = function () {
-        return console.log("El animal come plantas");
+        console.log("El animal come plantas");
     };
     return Herbivoro;
 }(mamifero_1.Mamifero));

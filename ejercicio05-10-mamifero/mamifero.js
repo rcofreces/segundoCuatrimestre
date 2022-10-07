@@ -19,7 +19,7 @@ var Mamifero = /** @class */ (function () {
         this.sexo = sexo;
     };
     Mamifero.prototype.comer = function () {
-        return console.log("El animal est\u00E1 comiendo");
+        console.log("El animal est\u00E1 comiendo");
     };
     return Mamifero;
 }());
