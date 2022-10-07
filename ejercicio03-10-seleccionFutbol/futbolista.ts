@@ -1,7 +1,7 @@
 import { Persona } from "./persona";
 
 export class Futbolista extends Persona {
-  protected dorsal: number;
+  protected dorsal: number; 
   protected equipo: string;
   
   constructor(pNombre: string, pApellido: string, pDorsal: number, pEquipo: string) {
