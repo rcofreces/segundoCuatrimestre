@@ -1,7 +1,7 @@
 import { Mamifero } from "./mamifero";
 
 export class Carnivoro extends Mamifero {
-    protected peso: number;
+    private peso: number;
 
     constructor(especie: string, sexo: string, peso: number) {
         super(especie, sexo);
@@ -17,6 +17,6 @@ export class Carnivoro extends Mamifero {
     }
 
     public comer(): void {
-        return console.log(`El animal come carne`);
+        console.log(`El animal come carne`);
     }
 }

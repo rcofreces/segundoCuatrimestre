@@ -24,6 +24,6 @@ export class Mamifero {
     }
 
     public comer(): void {
-        return console.log(`El animal está comiendo`);
+        console.log(`El animal está comiendo`);
     }
 }

@@ -1,7 +1,7 @@
 import { Mamifero } from "./mamifero";
 
 export class Omnivoro extends Mamifero {
-    protected cuadripedo: boolean;
+    private cuadripedo: boolean;
 
     constructor(especie: string, sexo: string, cuadripedo: boolean) {
         super(especie, sexo);
@@ -17,6 +17,6 @@ export class Omnivoro extends Mamifero {
     }
 
     public comer(): void {
-        return console.log(`El animal come plantas y carne`);
+        console.log(`El animal come plantas y carne`);
     }
 }
