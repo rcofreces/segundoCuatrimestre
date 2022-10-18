@@ -1,20 +1,26 @@
 import { Padre } from "./clasePadre";
 
 export class Libro extends Padre {
-    private genero: string;
+    private cantPaginas: number;
     private resumen: string;
+    private genero: string;
 
-    public constructor(pTitulo: string, pPaginas: number, pAutor: string, pPrecio: number, pGenero: string, pResumen: string) {
-        super(pTitulo, pPaginas, pAutor, pPrecio);
-        this.genero = pGenero;
+    public constructor(pTitulo: string, pAutor: string, pPrecio: number, pPaginas: number, pResumen: string, pGenero: string) {
+        super(pTitulo, pAutor, pPrecio);
+        this.cantPaginas = pPaginas;
         this.resumen = pResumen;
+        this.genero = pGenero;
     }
 
-    getResumen():string {
+    public getCantPaginas(): number {
+        return this.cantPaginas;
+    }
+
+    public getResumen(): string {
         return this.resumen;
     }
 
-    getGenero():string {
+    public getGenero(): string {
         return this.genero;
     }
 }

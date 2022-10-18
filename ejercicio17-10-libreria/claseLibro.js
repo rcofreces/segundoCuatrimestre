@@ -19,12 +19,16 @@ exports.Libro = void 0;
 var clasePadre_1 = require("./clasePadre");
 var Libro = /** @class */ (function (_super) {
     __extends(Libro, _super);
-    function Libro(pTitulo, pPaginas, pAutor, pPrecio, pGenero, pResumen) {
-        var _this = _super.call(this, pTitulo, pPaginas, pAutor, pPrecio) || this;
-        _this.genero = pGenero;
+    function Libro(pTitulo, pAutor, pPrecio, pPaginas, pResumen, pGenero) {
+        var _this = _super.call(this, pTitulo, pAutor, pPrecio) || this;
+        _this.cantPaginas = pPaginas;
         _this.resumen = pResumen;
+        _this.genero = pGenero;
         return _this;
     }
+    Libro.prototype.getCantPaginas = function () {
+        return this.cantPaginas;
+    };
     Libro.prototype.getResumen = function () {
         return this.resumen;
     };

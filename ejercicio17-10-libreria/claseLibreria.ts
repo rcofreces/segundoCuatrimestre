@@ -1,7 +1,7 @@
-import { Cliente } from "./claseCliente";
-import { Revista } from "./claseRevista";
-import { Libro } from "./claseLibro";
 import { Padre } from "./clasePadre";
+import { Libro } from "./claseLibro";
+import { Revista } from "./claseRevista";
+import { Cliente } from "./claseCliente";
 
 export class Libreria {
     private listaClientes: Cliente[];
@@ -13,21 +13,22 @@ export class Libreria {
         this.listaLibros = pListaLibros;
         this.listaRevistas = pListaRevista;
     }
-    setRevista(nuevaRevista: Revista):void {
+
+    public setRevista(nuevaRevista: Revista): void {
         this.listaRevistas.push(nuevaRevista);
     }
 
-    setLibro(nuevoLibro: Libro):void {
+    public setLibro(nuevoLibro: Libro): void {
         this.listaLibros.push(nuevoLibro);
     }
 
-    setCliente(nuevoCliente: Cliente):void {
+    public setCliente(nuevoCliente: Cliente): void {
         this.listaClientes.push(nuevoCliente);
     }
 
-    calcularPrecio(cliente: Cliente, articulo: Padre):number {
+    public calcularPrecio(cliente: Cliente, articulo: Padre): number {
         let precioConDescuento: number = 0;
         precioConDescuento = articulo.getPrecio() * (1-cliente.getDescuento());
         return precioConDescuento;
-    } 
-}   
+    }
+}

@@ -19,8 +19,8 @@ exports.Revista = void 0;
 var clasePadre_1 = require("./clasePadre");
 var Revista = /** @class */ (function (_super) {
     __extends(Revista, _super);
-    function Revista(pTitulo, pPaginas, pAutor, pPrecio, pNumero, pAño) {
-        var _this = _super.call(this, pTitulo, pPaginas, pAutor, pPrecio) || this;
+    function Revista(pTitulo, pAutor, pPrecio, pNumero, pAño) {
+        var _this = _super.call(this, pTitulo, pAutor, pPrecio) || this;
         _this.numero = pNumero;
         _this.año = pAño;
         return _this;

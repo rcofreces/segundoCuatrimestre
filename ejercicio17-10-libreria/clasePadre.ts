@@ -1,29 +1,24 @@
 export class Padre {
     protected titulo: string;
-    protected cantidadPag: number;
     protected autor: string;
     protected precio: number;
+    protected cantidadPag: number;
 
-    public constructor(pTitulo: string, pPaginas: number, pAutor: string, pPrecio: number) {
+    public constructor(pTitulo: string, pAutor: string, pPrecio: number) {
         this.titulo = pTitulo;
-        this.cantidadPag = pPaginas;
         this.autor = pAutor;
         this.precio = pPrecio;
     }
 
-    getTitulo():string {
+    public getTitulo(): string {
         return this.titulo;
     }
 
-    getCantPaginas():number {
-        return this.cantidadPag;
-    }
-
-    getAutor():string{
+    public getAutor(): string {
         return this.autor;
     }
     
-    getPrecio():number{
+     public getPrecio(): number {
         return this.precio;
     }
 }
