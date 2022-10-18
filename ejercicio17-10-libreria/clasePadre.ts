@@ -2,7 +2,6 @@ export class Padre {
     protected titulo: string;
     protected autor: string;
     protected precio: number;
-    protected cantidadPag: number;
 
     public constructor(pTitulo: string, pAutor: string, pPrecio: number) {
         this.titulo = pTitulo;
@@ -18,7 +17,7 @@ export class Padre {
         return this.autor;
     }
     
-     public getPrecio(): number {
+    public getPrecio(): number {
         return this.precio;
     }
 }

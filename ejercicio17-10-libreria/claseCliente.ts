@@ -33,7 +33,7 @@ export class Cliente {
         return this.apellido;
     }
 
-    public getDNI(): number {
+    public getDni(): number {
         return this.dni;
     }
     
@@ -45,7 +45,7 @@ export class Cliente {
         return this.listAutorFav;
     }
 
-    public getListaGeneroFavoritos(): string[] {
+    public getListaGenerosFavoritos(): string[] {
         return this.listGenFav;
     }
 
