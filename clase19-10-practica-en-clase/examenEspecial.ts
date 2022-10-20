@@ -9,7 +9,7 @@ export class ExamenEspecial extends Examen {
         this.penalizacionRepuestaIncorrecta = pPenalizacion
     }
 
-    public examenEspecial(tema: string, puntajeAprobacion: number, penalizacion: number): any {
+    public examenEspecial(tema: string, puntajeAprobacion: number, penalizacion: number): void {
         console.log(`El tema es ${tema}, el puntaje de aprobacion es ${puntajeAprobacion} y la penalizacion es ${penalizacion}`);
     }
 

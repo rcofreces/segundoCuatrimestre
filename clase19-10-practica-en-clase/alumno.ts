@@ -25,14 +25,10 @@ export class Alumno {
         return this.dni;
     }
 
-    public rendirExamen(examen: Examen, respuestas: number[]): boolean {
-        if (examen.getTema() === examen.getTema()) {
-            for (let i: number = 0; i < respuestas.length; i++) {
-                respuestas.push(respuestas[i]);
-                return true;
-            }
-            } else {
-            return false;
+/*     public rendirExamen(examen: Examen, respuestas: number[]): boolean {
+        for (let i: number = 0; i < respuestas.length; i++) {
+            if (RendicionDeExamen.getExamen() === examen) && (respuestas[i] === RendicionDeExamen.respuestas[i]) {
+
         }
-    }
+    } */
 }

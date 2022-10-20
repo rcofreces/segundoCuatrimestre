@@ -2,8 +2,8 @@ import { Alumno } from "./alumno";
 import { Examen } from "./examen";
 
 export class RendicionDeExamen {
-    private examen: Examen;
-    private respuestas: number[];
+    protected examen: Examen;
+    protected respuestas: number[];
 
     constructor(pExamen: Examen, pRespuestas: number[]) {
         this.examen = pExamen;
@@ -22,14 +22,13 @@ export class RendicionDeExamen {
         return this.examen;
     }
 
-    public estaAprobado(): boolean {
-        for (let i: number = 0; i < this.respuestas.length; i++) {
-            if (this.respuestas[i] === Alumno.rendirExamen()) {
-
-        }
+/*     public estaAprobado(): boolean {
+        if (Alumno.rendirExamen() === true) {
+            console.log(`El alumno aprobó el examen`)
             return true;
         } else {
+            console.log(`El alumno desaprobó el examen`)
             return false;
         }
-    }
+    } */
 }
