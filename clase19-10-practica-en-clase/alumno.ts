@@ -25,10 +25,20 @@ export class Alumno {
         return this.dni;
     }
 
-/*     public rendirExamen(examen: Examen, respuestas: number[]): boolean {
-        for (let i: number = 0; i < respuestas.length; i++) {
-            if (RendicionDeExamen.getExamen() === examen) && (respuestas[i] === RendicionDeExamen.respuestas[i]) {
-
+    public rendirExamen(examen: Examen, respuestas: number[]): boolean {
+        let aux = false;
+        for (let i: number = 0; i < this.examenesRendidos.length; i++) {
+            if (examen === this.examenesRendidos[i].getExamen()) {
+                this.examenesRendidos[i].rendicionDeExamen(examen, respuestas);
+                aux = true;
+            }
         }
-    } */
+        if (aux === true) {
+            console.log(`El alumno ${this.nombre} acaba de rendir el examen de ${examen.getTema()}`);
+            return true;
+        } else {
+            console.log(`El alumno ${this.nombre} ya rindio el examen de ${examen.getTema()}`);
+            return false;
+        }
+    }
 }

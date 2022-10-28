@@ -20,4 +20,4 @@ export class ExamenEspecial extends Examen {
     public getPenalizacionRespuestaIncorrecta(): number {
         return this.penalizacionRepuestaIncorrecta;
     }
-} 
+}

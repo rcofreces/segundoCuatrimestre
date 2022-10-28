@@ -11,9 +11,9 @@ export class RendicionDeExamen {
     }
 
     public rendicionDeExamen(examen: Examen, respuestas: number[]): void {
-        if (examen.getTema() === examen.getTema()) {
+        if (examen === this.examen) {
             for (let i: number = 0; i < respuestas.length; i++) {
-                respuestas.push(respuestas[i]);
+                this.respuestas.push(respuestas[i]);
             }
         }
     }
@@ -22,13 +22,13 @@ export class RendicionDeExamen {
         return this.examen;
     }
 
-/*     public estaAprobado(): boolean {
-        if (Alumno.rendirExamen() === true) {
-            console.log(`El alumno aprobó el examen`)
+    public estaAprobado(): boolean {
+        if (this.examen.equals(this.respuestas) === true) {
+            console.log(`El alumno aprobo el examen de ${this.examen.getTema()}`)
             return true;
         } else {
-            console.log(`El alumno desaprobó el examen`)
+            console.log(`El alumno desaprobo el examen de ${this.examen.getTema()}`)
             return false;
         }
-    } */
+    }
 }

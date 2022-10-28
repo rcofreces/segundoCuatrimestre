@@ -11,7 +11,7 @@ export class Examen {
         this.puntajeAprobacion = pPuntaje;
     }
 
-    public examen(tema: string, puntajeAprobacion: number): any {
+    public examen(tema: string, puntajeAprobacion: number): void {
         console.log(`El tema ${tema} se aprueba con ${puntajeAprobacion}`);
     }
 
@@ -19,14 +19,14 @@ export class Examen {
         this.preguntas.push(pregunta);
     }
 
-    public equals(o: Object): boolean {
-        let encontrado = false;
+    public equals(respuestasExamen: number[]): boolean {
+        let aux = 0;
         for (let i: number = 0; i < this.preguntas.length; i++) {
-            if (o[i] === this.preguntas[i]) {
-            encontrado = true;
+            if (this.preguntas[i].esCorrecta(respuestasExamen[i])) {
+                aux = aux + this.preguntas[i].getPuntaje();
             }
         }
-        if (encontrado === true) {
+        if (aux >= this.puntajeAprobacion) {
             return true;
         } else {
             return false;

@@ -11,8 +11,8 @@ export class Pregunta {
         this.puntaje = pPuntaje;
     }
 
-    public pregunta(consigna: string, puntaje: number): any {
-        console.log(`La pregunta es ${consigna} y el vale ${puntaje} puntos`);
+    public pregunta(consigna: string, puntaje: number): void {
+        console.log(`La pregunta es ${consigna} y vale ${puntaje} puntos`);
     }
 
     public addOpcion(opcion: String): void {
@@ -24,9 +24,17 @@ export class Pregunta {
     }
 
     public esCorrecta(respuesta: number): boolean {
-        if (respuesta === this.opcionCorrecta) {
+        let aux = false;
+        for (let i: number = 0; i <= this.opciones.length; i++) {
+            if (respuesta === this.opcionCorrecta) {
+                aux = true;
+            }
+        }
+        if (aux === true) {
+            console.log(`La respuesta de la pregunta ${this.consigna} es correcta`);
             return true;
         } else {
+            console.log(`La respuesta de la pregunta ${this.consigna} es incorrecta, la opcion correcta es la ${this.opcionCorrecta}`);
             return false;
         }
     }
